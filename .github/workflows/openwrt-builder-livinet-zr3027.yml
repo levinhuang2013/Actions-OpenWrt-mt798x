@@ -129,9 +129,9 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=immortalwrt-mediatek-mt7981${{ env.DEVICE_NAME }}$(date +"%Y.%m.%d-%H%M")" >> $GITHUB_OUTPUT
+        echo "release_tag=immortalwrt-mt798x${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}" >> $GITHUB_OUTPUT
         touch release.txt
-        [ ${UPLOAD_GOFILE} = true && ${{ steps.gofile.outputs.url }} ] && echo "🔗 [GoFile](${{ steps.gofile.outputs.url }})" >> release.txt
+        echo "immortalwrt-mt798x${{ env.DEVICE_NAME }}, ZN-M5/ZR-3027 64M UBI layout, LAN IP: 192.168.1.1, psw: password; ttyd, luci-app-mtk, mt_wifi-new-fw-20230411, warp-new-fw-20230411" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: Upload firmware to release
