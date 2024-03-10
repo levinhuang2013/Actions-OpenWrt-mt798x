@@ -131,7 +131,7 @@ jobs:
       run: |
         echo "release_tag=immortalwrt-mt798x${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}" >> $GITHUB_OUTPUT
         touch release.txt
-        echo "immortalwrt-mt798x${{ env.DEVICE_NAME }}, ZN-M5/ZR-3027 110M UBI layout, LAN IP: 192.168.10.1, psw: password; ddns-go, openclash, passwall, adguardhome, aliyun-webdav, luci-app-mtwifi-cfg, mt_wifi-new-fw-20230411, warp-new-fw-20230411" >> release.txt
+        echo "immortalwrt-mt798x${{ env.DEVICE_NAME }}, ZN-M5/ZR-3027 112M UBI layout, LAN IP: 192.168.10.1, psw: password; openclash, passwall, adguardhome, aliyun-webdav, luci-app-mtwifi-cfg, mt_wifi-new-fw-20230411, warp-new-fw-20230411" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: Upload firmware to release
