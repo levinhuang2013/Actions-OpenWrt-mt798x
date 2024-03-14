@@ -33,8 +33,8 @@ sed -i 's/mt7981-fw-20230306/mt7981-fw-20230411/g' package/mtk/drivers/mt_wifi/M
 # Add OpenClash DEV/TUN core
 cd ./feeds/luci/applications/luci-app-openclash/root/etc/openclash/
 mkdir ./core && cd ./core
-#curl -sfL -o ./dev.tar.gz https://github.com/vernesong/OpenClash/raw/core/dev/dev/clash-linux-arm64.tar.gz
-#tar -zxf ./dev.tar.gz
-curl -sfL -o ./clash_tun.gz https://github.com/vernesong/OpenClash/raw/core/dev/premium/clash-linux-arm64-2023.08.17-13-gdcc8d87.gz
-gzip -d clash_tun.gz
+curl -sfL -o ./dev.tar.gz https://github.com/vernesong/OpenClash/raw/core/dev/dev/clash-linux-arm64.tar.gz
+tar -zxf ./dev.tar.gz
+#curl -sfL -o ./clash_tun.gz https://github.com/vernesong/OpenClash/raw/core/dev/premium/clash-linux-arm64-2023.08.17-13-gdcc8d87.gz
+#gzip -d clash_tun.gz
 chmod +x ./clash* ; rm -rf ./*.gz
