@@ -54,7 +54,7 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        git clone $REPO_URL -b $REPO_BRANCH openwrt
+        git clone --depth=1 $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
     - name: Load custom feeds
@@ -131,7 +131,7 @@ jobs:
       run: |
         echo "release_tag=immortalwrt-mt798x${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}" >> $GITHUB_OUTPUT
         touch release.txt
-        echo "immortalwrt-mt798x${{ env.DEVICE_NAME }}, LAN IP: 192.168.31.1, psw: password; openclash, passwall, adguardhome, aliyun-webdav, luci-app-mtwifi-cfg, mt_wifi-new-fw-20230411, warp-new-fw-20230411" >> release.txt
+        echo "immortalwrt-mt798x${{ env.DEVICE_NAME }}, LAN IP: 192.168.31.1, psw: password; openclash(tun), passwall, adguardhome, aliyun-webdav, luci-app-mtk, mt_wifi-new-fw-20230411, warp-new-fw-20230411" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: Upload firmware to release
