@@ -15,7 +15,7 @@ git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app
 git clone https://github.com/messense/aliyundrive-webdav package/aliyundrive-webdav
 
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_generate
+#sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_generate
 
 # Modify default theme
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
@@ -34,8 +34,6 @@ cd ./feeds/luci/applications/luci-app-openclash/root/etc/openclash/
 mkdir ./core && cd ./core
 #curl -sfL -o ./dev.tar.gz https://github.com/vernesong/OpenClash/raw/core/dev/dev/clash-linux-arm64.tar.gz
 #tar -zxf ./dev.tar.gz
-#echo "openclash core DEV was added."
-curl -sfL -o clash_tun.gz https://github.com/vernesong/OpenClash/raw/core/dev/premium/clash-linux-arm64-2023.08.17-13-gdcc8d87.gz
+curl -sfL -o ./clash_tun.gz https://github.com/vernesong/OpenClash/raw/core/dev/premium/clash-linux-arm64-2023.08.17-13-gdcc8d87.gz
 gzip -d clash_tun.gz
-echo "openclash core TUN was added."
 chmod +x ./clash* ; rm -rf ./*.gz
