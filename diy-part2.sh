@@ -21,20 +21,20 @@ git clone https://github.com/messense/aliyundrive-webdav package/aliyundrive-web
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 # Modify default WiFi SSID
-sed -i 's/ImmortalWrt-2.4G/CMCC-4gnm/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
+#sed -i 's/ImmortalWrt-2.4G/CMCC-4gnm/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
 #sed -i 's/ImmortalWrt-5G/Xiaomi_72FB_5G/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
-sed -i 's/MT7981_AX3000_2.4G/CMCC-4gnm/g' package/mtk/drivers/wifi-profile/files/mt7981/mt7981.dbdc.b0.dat
-sed -i 's/MT7981_AX3000_5G/CMCC-4gnm-5G/g' package/mtk/drivers/wifi-profile/files/mt7981/mt7981.dbdc.b1.dat
+#sed -i 's/MT7981_AX3000_2.4G/CMCC-4gnm/g' package/mtk/drivers/wifi-profile/files/mt7981/mt7981.dbdc.b0.dat
+#sed -i 's/MT7981_AX3000_5G/CMCC-4gnm-5G/g' package/mtk/drivers/wifi-profile/files/mt7981/mt7981.dbdc.b1.dat
 
 # Use WACPU/WOCPU NEW FW
 sed -i 's/mt7981-fw-20230306/mt7981-fw-20230411/g' package/mtk/drivers/mt_wifi/Makefile
 #sed -i 's/mt7981-fw-20230411/mt7981-fw-20230330/g' package/mtk/drivers/warp/Makefile
 
 # Add OpenClash DEV/TUN core
-cd ./feeds/luci/applications/luci-app-openclash/root/etc/openclash/
-mkdir ./core && cd ./core
-curl -sfL -o ./dev.tar.gz https://github.com/vernesong/OpenClash/raw/core/dev/dev/clash-linux-arm64.tar.gz
-tar -zxf ./dev.tar.gz
+#cd ./feeds/luci/applications/luci-app-openclash/root/etc/openclash/
+#mkdir ./core && cd ./core
+#curl -sfL -o ./dev.tar.gz https://github.com/vernesong/OpenClash/raw/core/dev/dev/clash-linux-arm64.tar.gz
+#tar -zxf ./dev.tar.gz
 #curl -sfL -o ./clash_tun.gz https://github.com/vernesong/OpenClash/raw/core/dev/premium/clash-linux-arm64-2023.08.17-13-gdcc8d87.gz
 #gzip -d clash_tun.gz
-chmod +x ./clash* ; rm -rf ./*.gz
+#chmod +x ./clash* ; rm -rf ./*.gz
