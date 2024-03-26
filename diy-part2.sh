@@ -15,7 +15,7 @@ git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app
 git clone https://github.com/messense/aliyundrive-webdav package/aliyundrive-webdav
 
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_generate
+#sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_generate
 
 # Modify default theme
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
@@ -23,8 +23,8 @@ sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_genera
 # Modify default WiFi SSID
 #sed -i 's/ImmortalWrt-2.4G/CMCC-4gnm/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
 #sed -i 's/ImmortalWrt-5G/Xiaomi_72FB_5G/g' package/mtk/applications/mtwifi-cfg/files/mtwifi.sh
-sed -i 's/MT7981_AX3000_2.4G/Xiaomi_72FB/g' package/mtk/drivers/wifi-profile/files/mt7981/mt7981.dbdc.b0.dat
-sed -i 's/MT7981_AX3000_5G/Xiaomi_72FB_5G/g' package/mtk/drivers/wifi-profile/files/mt7981/mt7981.dbdc.b1.dat
+sed -i 's/MT7981_AX3000_2.4G/CMCC-4gnm/g' package/mtk/drivers/wifi-profile/files/mt7981/mt7981.dbdc.b0.dat
+sed -i 's/MT7981_AX3000_5G/CMCC-4gnm-5G/g' package/mtk/drivers/wifi-profile/files/mt7981/mt7981.dbdc.b1.dat
 
 # Use WACPU/WOCPU NEW FW
 sed -i 's/mt7981-fw-20230306/mt7981-fw-20230411/g' package/mtk/drivers/mt_wifi/Makefile
