@@ -1,0 +1,205 @@
+﻿{
+    "spider": "./cwc_spider.jar;md5;ec670b8f675bdeec7f6b94afce073e99",
+    "wallpaper": "https://api.likepoems.com/img/bing",
+    "sites": [
+        {
+            "key": "泥巴",
+            "name": "泥巴",
+            "type": 3,
+            "api": "csp_NiNi",
+            "searchable": 1,
+            "changeable": 1
+        },
+        {
+            "key": "直播转点播",
+            "name": "直播转点播",
+            "type": 3,
+            "searchable": 1,
+            "quickSearch": 0,
+            "filterable": 0,
+            "timeout": 30,
+            "style": {
+                "type": "rect",
+                "ratio": 1.433
+            },
+            "api": "./live2vod/live2cms.js",
+            "ext": "./live2vod/live.json;showHomeVod=0"
+        },
+        {
+            "key": "海外看",
+            "name": "海外看",
+            "type": 1,
+            "api": "http://api.haiwaikan.com/v1/vod?ac=list",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "categories": ["动作片","喜剧片", "爱情片", "动画电影片", "网络电影片", "科幻片", "奇幻片", "歌舞片", "经典片", "恐怖片", "冒险片", "悬疑片", "惊悚片", "战争片", "灾难片", "犯罪片", "纪录片", "剧情片", "犯罪片", "国产剧", "港剧", "台剧", "欧美剧", "日剧", "韩剧", "新马剧", "其他剧", "国产综艺", "港台综艺", "日本综艺", "韩国综艺", "欧美综艺", "新马泰综艺", "其他综艺", "国产动漫", "港台动漫", "欧美动漫", "日本动漫", "韩国动漫", "其他动漫"]
+        },
+        {
+            "key": "豆瓣",
+            "name": "豆瓣",
+            "type": 3,
+            "api": "csp_Douban",
+            "searchable": 1,
+            "changeable": 1
+        },
+        {
+            "key": "星星",
+            "name": "星星",
+            "type": 3,
+            "api": "csp_Star",
+            "searchable": 1,
+            "changeable": 1
+        },
+        {
+            "key": "哔哩",
+            "name": "哔哩",
+            "type": 3,
+            "api": "csp_Bili",
+            "searchable": 1,
+            "changeable": 0,
+            "style": {
+                "type": "rect",
+                "ratio": 1.433
+            },
+            "ext": {
+                "json": "./json/bili.json",
+                "cookie": "http://127.0.0.1:9978/file/TV/bili-cookie.txt"
+            }
+        },
+        {
+            "key": "看球",
+            "name": "看球",
+            "type": 3,
+            "api": "csp_Kanqiu",
+            "searchable": 1,
+            "changeable": 0,
+            "style": {
+                "type": "list"
+            }
+        },
+        {
+            "key": "csp_FirstAid",
+            "name": "🚑急救指南",
+            "type": 3,
+            "api": "csp_FirstAid",
+            "searchable": 1,
+            "quickSearch": 1,
+            "changeable": 0
+        },
+        {
+            "key": "push_agent",
+            "name": "推送",
+            "type": 3,
+            "api": "csp_Push",
+            "searchable": 1,
+            "changeable": 0
+        },
+        {
+            "key": "本地",
+            "name": "本地",
+            "type": 3,
+            "api": "csp_Local",
+            "searchable": 0,
+            "changeable": 0
+        }
+    ],
+    "doh": [
+        {
+            "name": "Google",
+            "url": "https://dns.google/dns-query",
+            "ips": ["8.8.4.4", "8.8.8.8"]
+        },
+        {
+            "name": "Cloudflare",
+            "url": "https://cloudflare-dns.com/dns-query",
+            "ips": ["1.1.1.1", "1.0.0.1", "2606:4700:4700::1111", "2606:4700:4700::1001"]
+        },
+        {
+            "name": "AdGuard",
+            "url": "https://dns.adguard.com/dns-query",
+            "ips": ["94.140.14.140", "94.140.14.141"]
+        },
+        {
+            "name": "DNSWatch",
+            "url": "https://resolver2.dns.watch/dns-query",
+            "ips": ["84.200.69.80", "84.200.70.40"]
+        },
+        {
+            "name": "Quad9",
+            "url": "https://dns.quad9.net/dns-quer",
+            "ips": ["9.9.9.9", "149.112.112.112"]
+        }
+    ],
+    "rules": [
+        {
+            "name": "海外看",
+            "hosts": ["haiwaikan"],
+            "regex": [
+                "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:10\\.?[0-9]*,\\r*\\n*[\\S]*?\\r*\\n*#EXT-X-DISCONTINUITY"
+            ]
+        },
+        {
+            "name": "DEFAULT",
+            "hosts": ["bfengbf", "vip.lz", "hd.lz", "v.cdnlz", "lz-cdn", "vip.ffzy", "hd.ffzy", "ffzy-online",
+                "yzzy", "play-cdn", "hdzyk-cdn", "vipzyk-video"],
+            "regex": ["DEFAULT"]
+        }
+    ],
+    "ads": [
+        "static-mozai.4gtv.tv"
+    ],
+    "lives": [
+        {
+            "name": "MyHome",
+            "type": 0,
+            "url": "http://127.0.0.1:9978/proxy?do=live&url=./live.txt",
+            "playerType": 1,
+            "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0",
+            "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+            "logo": "https://epg.112114.xyz/logo/{name}.png"
+        },
+        {
+            "name": "HkTV",
+            "type": 0,
+            "url": "http://127.0.0.1:9978/proxy?do=live&url=./hktvlive.m3u",
+            "playerType": 2,
+            "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+            "logo": "https://epg.112114.xyz/logo/{name}.png"
+        },
+        {
+            "name": "大马电视台",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/MIFNtechnology/siaranMy/main/myIPtv.m3u8",
+            "playerType": 2,
+            "ua": "okhttp/3.15",
+            "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+            "logo": "https://epg.112114.xyz/logo/{name}.png"
+        },
+        {
+            "name": "范明明",
+            "type": 0,
+            "url": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
+            "playerType": 1,
+            "ua": "okhttp/3.15",
+            "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+            "logo": "https://epg.112114.xyz/logo/{name}.png"
+        },
+        {
+            "name": "央视频嗅探",
+            "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0",
+            "type": 0,
+            "playerType": 2,
+            "timeout": 50,
+            "url": "./parse/ysp.m3u",
+            "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+            "logo": "https://epg.112114.xyz/logo/{name}.png"
+        },
+        {
+            "name": "电台",
+            "type": 0,
+            "url": "./radio.txt",
+            "playerType": 1
+        }
+    ]
+}
