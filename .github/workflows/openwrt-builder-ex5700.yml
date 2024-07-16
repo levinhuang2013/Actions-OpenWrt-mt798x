@@ -17,10 +17,10 @@ on:
   workflow_dispatch:
 
 env:
-  REPO_URL: https://github.com/levinhuang2013/immortalwrt-mt798x
-  REPO_BRANCH: openwrt-21.02
+  REPO_URL: https://github.com/immortalwrt/immortalwrt
+  REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: hanwckf/ex5700-ax7800.config
+  CONFIG_FILE: hanwckf/imm-master.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part4.sh
   UPLOAD_BIN_DIR: false
@@ -131,7 +131,7 @@ jobs:
       run: |
         echo "release_tag=immortalwrt-mt798x${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}" >> $GITHUB_OUTPUT
         touch release.txt
-        echo "immortalwrt-mt798x${{ env.DEVICE_NAME }}, lan: 192.168.2.1, psw: password; luci-app-mtk, mt_wifi-new-fw: mt7986-20230808, mt7916-20220906, warp-new-fw-20230421" >> release.txt
+        echo "immortalwrt${{ env.DEVICE_NAME }}, lan: 192.168.1.1, psw: password" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: Upload firmware to release
