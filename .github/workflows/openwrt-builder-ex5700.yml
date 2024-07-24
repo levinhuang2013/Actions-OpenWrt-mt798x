@@ -131,7 +131,7 @@ jobs:
       run: |
         echo "release_tag=immortalwrt-mt798x${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}" >> $GITHUB_OUTPUT
         touch release.txt
-        echo "immortalwrt-mt798x${{ env.DEVICE_NAME }}, lan: 192.168.1.1, luci-app-mtk, use system setting wifi-profile.dat, hanwckf ax6000 mt_wifi config, mt7896-fw-ax7800, mt7916-fw-ax7800(7 bins),use mt7981 b0 b1 dat as mt7916.dat, mt_wifi operation model disable 6G, revise dts and gpy211 to enable led" >> release.txt
+        echo "immortalwrt-mt798x${{ env.DEVICE_NAME }}, lan: 192.168.1.1, luci-app-mtk, hanwckf ax6000 mt_wifi config, mt7896-fw-ax7800, mt7916-fw-ax7800(7 bins), revise mt7916 b0 and b1-5g.dat acc. to ex5700 and mt7981, mt_wifi operation model disable 6G, revise dts and gpy211 to enable led" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: Upload firmware to release
