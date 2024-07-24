@@ -20,7 +20,7 @@ env:
   REPO_URL: https://github.com/levinhuang2013/immortalwrt-mt798x
   REPO_BRANCH: openwrt-21.02
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: hanwckf/ex5700-ax7800-0722.config
+  CONFIG_FILE: hanwckf/ex5700-ax7800-6g-0724.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part4.sh
   UPLOAD_BIN_DIR: false
@@ -131,7 +131,7 @@ jobs:
       run: |
         echo "release_tag=immortalwrt-mt798x${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}" >> $GITHUB_OUTPUT
         touch release.txt
-        echo "immortalwrt-mt798x${{ env.DEVICE_NAME }}, lan: 192.168.1.1, luci-app-mtk, hanwckf ax6000 mt_wifi config, mt7896-fw-ax7800, mt7916-fw-ax7800(7 bins), revise mt7916 b0 and b1-5g.dat acc. to ex5700 and mt7981, mt_wifi operation model disable 6G, revise dts and gpy211 to enable led" >> release.txt
+        echo "immortalwrt-mt798x${{ env.DEVICE_NAME }}, lan: 192.168.1.1, luci-app-mtk, hanwckf ax6000 mt_wifi config, mt7896-fw-ax7800, mt7916-fw-ax7800(7 bins), revise mt7916 b0 and b1 6g 5g.dat acc. to ex5700 and mt7981, mt_wifi operation model default 6G, revise dts and gpy211 to enable led" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: Upload firmware to release
