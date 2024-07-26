@@ -15,4 +15,9 @@
 #git clone https://github.com/messense/aliyundrive-webdav package/aliyundrive-webdav
 
 # Modify default IP
-#sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
+
+# Disable raix0 6G
+sed -i '/exit 0/d' package/base-files/files/etc/rc.local
+echo 'ifconfig raix0 down' >> package/base-files/files/etc/rc.local
+echo 'exit 0' >> package/base-files/files/etc/rc.local
