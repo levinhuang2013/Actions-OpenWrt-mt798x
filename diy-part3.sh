@@ -13,6 +13,7 @@
 #git clone -b js https://github.com/gngpp/luci-theme-design package/luci-theme-design
 git clone https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
 git clone https://github.com/messense/aliyundrive-webdav package/aliyundrive-webdav
+git clone https://github.com/sirpdboy/netspeedtest package/homebox
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
