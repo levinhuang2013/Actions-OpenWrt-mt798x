@@ -131,7 +131,7 @@ jobs:
       run: |
         echo "release_tag=immortalwrt-mt798x${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}" >> $GITHUB_OUTPUT
         touch release.txt
-        echo "immortalwrt-mt798x${{ env.DEVICE_NAME }}, lan: 192.168.2.1, luci-app-mtk, ax6000 mt_wifi config, mt7896-fw-ax7800(5 bins), mt7916-fw-ax7800(5 bins), revise mt7916 b0 and b1 6g 5g.dat acc. to ex5700 and mt7981, mt_wifi operation model default 6G, revise 742-net-dsa-add-MT7531-Gigabit-Ethernet-PHY-setting.patch to enable GBE 2nd led, revise dts and gpy211 to enable 2.5g wan lan led0/1, ifconfig raix0 down, writr MAC to rai0 raix0 dat, add netspeedtest(homebox)" >> release.txt
+        echo "immortalwrt-mt798x${{ env.DEVICE_NAME }}, lan: 192.168.2.1, luci-app-mtk, ax6000 mt_wifi config, mt7896-fw-ax7800(5 bins), mt7916-fw-ax7800(5 bins), revise mt7916 b0 and b1 6g 5g.dat acc. to ex5700 and mt7981, mt_wifi operation model default 6G, revise 742-net-dsa-add-MT7531-Gigabit-Ethernet-PHY-setting.patch to enable GBE 2nd led, revise dts and gpy211 to enable 2.5g wan lan led0/1, ifconfig raix0 down, writr MAC to rai0 raix0 dat, add netspeedtest(homebox), set gpy211 lan/wan led0 1008/240, add ra0/rax0/rai0/raix0 to br-lan bridge, write ra0/rai0 to dat, fix 7916-rai0/raix0 wifi tempinfo" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: Upload firmware to release
