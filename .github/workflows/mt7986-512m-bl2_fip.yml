@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: mt7986-spi-nand-512m-bl2_fip
+name: mt7986-512m-bl2_fip
 
 on:
   repository_dispatch:
@@ -21,7 +21,7 @@ env:
   REPO_BRANCH: master
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
-  DEVICE_NAME: zyxel_ex5700_bl2_fip
+  DEVICE_NAME: zyxel_ex5700-512m_bl2_fip
   TZ: Asia/Shanghai
 
 jobs:
