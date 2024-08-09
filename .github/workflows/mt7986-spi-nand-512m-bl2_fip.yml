@@ -21,7 +21,7 @@ env:
   REPO_BRANCH: master
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
-  DEVICE_NAME: zyxel_ex5700_spinand-512m_bl2_fip
+  DEVICE_NAME: zyxel_ex5700_bl2_fip
   TZ: Asia/Shanghai
 
 jobs:
